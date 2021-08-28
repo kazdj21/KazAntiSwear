@@ -3,7 +3,9 @@ from discord.ext import commands
 import re
 
 bot = commands.Bot(command_prefix="$")
-token = "ODgwNzI5MzA2ODUzMTUwNzMy.YSihFQ.wrZCGpSVu92RyRlBa6pzDmJCIoc"
+
+with open("token.txt", "r") as file:
+    token = file.readline()
 
 def censorCheck(userInput):
     with open("swear-list.txt", "r") as file:
